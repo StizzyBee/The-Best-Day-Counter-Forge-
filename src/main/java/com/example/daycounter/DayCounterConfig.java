@@ -8,8 +8,7 @@ import java.io.*;
 import java.nio.file.*;
 
 /**
- * Persists position, scale, language, font, and text case to
- * config/day-counter.json (resolved via Forge's {@link FMLPaths#CONFIGDIR}).
+ * Persists position, scale, and language to config/day-counter.json
  */
 public class DayCounterConfig {
 
@@ -30,6 +29,9 @@ public class DayCounterConfig {
     public String font      = DayCounterFont.DEFAULT.id;
     public String textCase  = DayCounterTextCase.NORMAL.id;
 
+    // ── Derived (not serialised) ───────────────────────────────────────────────
+
+    /** Convenience getter — resolves the stored id to the enum. */
     public DayCounterLanguage getLanguage() {
         return DayCounterLanguage.fromId(language);
     }
@@ -53,6 +55,8 @@ public class DayCounterConfig {
     public void setTextCase(DayCounterTextCase c) {
         this.textCase = c.id;
     }
+
+    // ── Serialisation ──────────────────────────────────────────────────────────
 
     public static DayCounterConfig load() {
         if (Files.exists(CONFIG_FILE)) {
