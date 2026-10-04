@@ -1,5 +1,7 @@
 # Day Counter (Forge)
 
+**Minecraft 1.21.3:** an independent build is available in [versions/1.21.3](versions/1.21.3). See its README for loader requirements and build instructions.
+
 A lightweight, client-side HUD mod that shows how many in-game days have passed. Everything is configurable from a settings screen inside the game — no config files to edit.
 
 This is the **Forge** build for Minecraft **26.1.2**. See also the [Fabric](https://github.com/StizzyBee/The-Best-Day-Counter-Fabric) and [NeoForge](https://github.com/StizzyBee/The-Best-Day-Counter-NeoForge) versions.
